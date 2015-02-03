@@ -4,7 +4,9 @@ Testing Akavache on Xamarin Android with a Shared PCL Library
 
 This repo is for testing Akavache's persistence across Xamarin Android app restarts when it's being hosted in a shared library.
 
-TL;DR: As long as the app is running, the caching works perfectly. However, when the app is relaunched from scratch (or, for example, the device is rebooted, the cached information is gone. Either the cache is being reset, or recreated, either way, all the data that was stored is gone).
+TL;DR: As long as the app is running, the caching works perfectly. However, when the app is relaunched from scratch (or, for example, the device is rebooted), the cached information is gone. 
+
+Either the cache is being reset, or recreated, either way, all the data that was stored is gone.
 
 This project is for reproing the issue as described on
 

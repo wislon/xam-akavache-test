@@ -29,7 +29,7 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidLinkSkip />
-    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
@@ -100,7 +100,9 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\MainActivity.axml" />
+    <AndroidResource Include="Resources\layout\MainActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />

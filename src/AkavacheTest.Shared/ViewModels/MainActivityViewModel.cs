@@ -35,14 +35,22 @@ namespace AkavacheTest.Shared.ViewModels
             WriteStringToCache.Subscribe(returnedString => TextFromCache = returnedString);
 
             WriteStringToCache.ThrownExceptions.Subscribe(
-                exception => this.Log().ErrorException("There was an error reading/writing to cache", exception));
+                exception =>
+                {
+                    this.Log().ErrorException("There was an error reading/writing to cache", exception);
+                    TextFromCache = string.Format("Error reading/writing to cache: {0}", exception);
+                });
 
-
-            ReadStringFromCache = ReactiveCommand.CreateAsyncTask(canStore, async _ => await ReadStringFromCacheImpl());
+            var canRead = Observable.Return(true);
+            ReadStringFromCache = ReactiveCommand.CreateAsyncTask(canRead, async _ => await ReadStringFromCacheImpl());
             ReadStringFromCache.Subscribe(returnedString => TextFromCache = returnedString);
 
             ReadStringFromCache.ThrownExceptions.Subscribe(
-                exception => this.Log().ErrorException("There was an error reading from the cache", exception));
+                exception =>
+                {
+                    this.Log().ErrorException("There was an error reading from the cache", exception);
+                    TextFromCache = string.Format("Error reading cache: {0}", exception);
+                });
 
         }
 

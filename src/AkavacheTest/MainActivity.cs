@@ -1,12 +1,8 @@
-﻿using System.Linq;
-using Akavache;
-using AkavacheTest.Shared.ViewModels;
+﻿using AkavacheTest.Shared.ViewModels;
 using AkavacheTest.Views;
 using Android.App;
-using Android.Graphics;
 using Android.Widget;
 using Android.OS;
-using Java.IO;
 using ReactiveUI;
 using Splat;
 
@@ -42,10 +38,10 @@ namespace AkavacheTest
             this.BindCommand(ViewModel, vm => vm.WriteStringToCache, v => v._btnWriteToCache);
             this.BindCommand(ViewModel, vm => vm.ReadStringFromCache, v => v._btnReadFromCache);
 
-            string cacheDir = this.CacheDir.AbsolutePath;
-            string filesDir = this.FilesDir.AbsolutePath;
-            this.Log().Info("App INTERNAL cache dir: {0}", cacheDir);
-            this.Log().Info("App INTERNAL files dir: {0}", filesDir);
+            string cacheDir = this.ExternalCacheDir.AbsolutePath;
+            string filesDir = this.GetExternalFilesDir(null).AbsolutePath;
+            this.Log().Info("App EXTERNAL cache dir: {0}", cacheDir);
+            this.Log().Info("App EXTERNAL files dir: {0}", filesDir);
 
             string testFileName = System.IO.Path.Combine(filesDir, "testfile.txt");
             System.IO.File.WriteAllText(testFileName, "let's see where this ends up");

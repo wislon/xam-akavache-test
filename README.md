@@ -8,7 +8,7 @@ TL;DR: As long as the app is running, the caching works perfectly. However, when
 
 Either the cache is being reset, or recreated, either way, all the data that was stored is gone.
 
-This project is for reproing the issue as described on
+This project is for attempting to repro the issue as described at
 
 StackOverflow: http://stackoverflow.com/questions/28294496/akavache-not-persisting-cache-data-between-app-restarts
 Xamarin Forums: https://forums.xamarin.com/discussion/comment/101000

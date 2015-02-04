@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkavacheTest", "AkavacheTest\AkavacheTest.csproj", "{6A86AF99-35BC-42A7-84C3-7F7FF6283D4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AkavacheTest.Shared", "AkavacheTest.Shared\AkavacheTest.Shared.csproj", "{2A70AF39-1105-491F-A409-1A1E1877499B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{6A86AF99-35BC-42A7-84C3-7F7FF6283D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A86AF99-35BC-42A7-84C3-7F7FF6283D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A86AF99-35BC-42A7-84C3-7F7FF6283D4B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2A70AF39-1105-491F-A409-1A1E1877499B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A70AF39-1105-491F-A409-1A1E1877499B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A70AF39-1105-491F-A409-1A1E1877499B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A70AF39-1105-491F-A409-1A1E1877499B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

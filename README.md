@@ -18,3 +18,9 @@ Remove it from the backstack, or reboot the phone, or make sure the app is compl
 2. Hit the "read" button
 3. The text you typed in previously should appear.
 
+### Instantiating Akavache (perhaps you need IoC or because reasons)
+If you're interested in instantiating an Akavache instance (IBlobCache), have a look at `SharedAppGlobal.Init()`, and where the initial path is set (this will need to be done in your platspec project and passed down to the shared lib) in `AkavacheTest.BaseViews\BaseView.cs` class.
+
+You can then reference the instantiated version in the shared library, and Akavache will take care of all the cache file location setup, database initialisation, etc. It also takes care of supplying an encryption provider and a task scheduler for the threading/async stuff.
+
+Happy caching! :)

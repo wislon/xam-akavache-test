@@ -57,13 +57,17 @@ namespace AkavacheTest.Shared.ViewModels
         private async Task<string> WriteStringToCacheImpl()
         {
             string text = _textToSave;
-            await BlobCache.UserAccount.InsertObject("text", text);
-            return await BlobCache.UserAccount.GetObject<string>("text");
+            // await SharedAppGlobal.EncryptedCache.InsertObject("text", text);
+            await SharedAppGlobal.NormalCache.InsertObject("text", text);
+
+            // return await SharedAppGlobal.EncryptedCache.GetObject<string>("text");
+            return await SharedAppGlobal.NormalCache.GetObject<string>("text");
         }
 
         private async Task<string> ReadStringFromCacheImpl()
         {
-            return await BlobCache.UserAccount.GetObject<string>("text");
+            // return await SharedAppGlobal.EncryptedCache.GetObject<string>("text");
+            return await SharedAppGlobal.NormalCache.GetObject<string>("text");
         }
 
     }

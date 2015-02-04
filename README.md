@@ -4,7 +4,9 @@ Testing Akavache on Xamarin Android with a Shared PCL Library
 
 This repo is for testing Akavache's persistence across Xamarin Android app restarts when it's being hosted in a shared library.
 
-Quick run-through:
+It uses some basic ReactiveUi wizardry for hooking up the buttons and the textbox/label. If you're not familiar with RxUi then that doesn't matter, because it has no bearing at all on the initialisation and usage of the Akavache stuff.
+
+### Quick-start:
 
 1. Run the app (deploy and run, don't run inside a debugger, because if you relaunch it with the debugger, it'll probably clobber everything).
 2. Type something in the box, and hit the "save" button (your text should appear in the label).
